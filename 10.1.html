@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+.container p
+{
+font-size: 100px;
+}
+
+@media screen and (min-width: 1280px) {
+    .container p
+ {
+    font-size: calc(16px + 6 * ((100vw - 1080px) / 1920));
+  }
+}
+
+
+</style>
+
+<body>
+    
+    <div class="container">
+
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio fuga temporibus, ducimus commodi aliquam est consectetur numquam, voluptas autem repudiandae velit repellendus expedita id ipsa, aspernatur labore! Nobis, expedita vel!
+        </p>
+    </div>
+</body>
+</html>
