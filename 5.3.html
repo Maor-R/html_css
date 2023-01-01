@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>My profile - divs, spans, classes and ids and css</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+  <style>
+    .follow-me {
+      color: rgb(130, 47, 47);
+    }
+
+
+    .main-div {
+      padding-left: 24px;
+      padding-top: 16px;
+      padding-right: 24px;
+      padding-bottom: 16px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      transition: 0.3s;
+      width: 51%;
+      background-color: rgb(210, 140, 49);
+
+      font-size: medium;
+      color: brown;
+      font-family: "Sofia", sans-serif;
+
+    }
+
+    .secondary-div {
+      padding-left: 16px;
+      padding-top: 20px;
+      padding-right: 16px;
+      padding-bottom: 20px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      transition: 0.3s;
+      background-color: azure;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div id="main-header" class="main-div">
+    <div class="secondary-div">
+      <h1><em>Hi there my name is </em> Maor Revivo</h1>
+      <h2>I am a programmer <i class="fa-solid fa-laptop-code"></i></h2>
+      <img src="./images/picture.png" width="150px" alt="profile picture" />
+
+      <h4>
+        I enjoy to study Torah, to program, and to cook.
+      </h4>
+    </div>
+    <div id="follow_me" class="card">
+      <h3>Follow <span class="follow-me">me</span></h3>
+      <ul>
+        <li>
+          <p>I am not connected to social networks.</p>
+        </li>
+    </div>
+    </ul>
+  </div>
+</body>
+
+</html>
