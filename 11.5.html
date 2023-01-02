@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+.container
+{
+
+    display: flex;
+    justify-content: right;
+    align-items:stretch;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: gainsboro;
+
+    
+}
+.nav-item
+{
+    color: blue;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.75rem;
+
+
+
+
+}
+.navbar a{
+
+}
+
+.item-1
+{
+    flex: 1;
+}
+
+
+@media screen and (max-width: 800px) {
+    .container
+ {
+    flex-direction: column;
+    align-items:center;
+  }
+
+  .item-1
+{
+    font-weight: bold;
+}
+}
+</style>
+<body>
+    
+    <div>
+        <nav class="navbar">
+            <ul  class="container">
+                <a href="#" class="nav-item item-1">APPLESEEDS</a>
+                <a href="#" class="nav-item ">HOME</a>
+                <a href="#" class="nav-item">ABOUT</a>
+                <a href="#" class="nav-item">PORTFOLIO</a>
+               <a href="#" class="nav-item">CONTACT</a>
+            </ul>
+        </nav>
+    </div>
+</body>
+</html>
