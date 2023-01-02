@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,13 +8,11 @@
     <title>CSS – Tooltip</title>
 </head>
 <style>
-
-
-      .tooltip{
+    .tooltip {
         position: relative;
-      }
-      
-      .tooltip:after {
+    }
+
+    .tooltip:after {
         display: none;
         content: attr(data-tooltip);
         color: rgb(142, 61, 61);
@@ -22,17 +21,21 @@
         text-align: center;
         width: 16vw;
         border: 0.1rem solid rgb(186, 192, 38);
-      }
-      
-      .tooltip:hover:after {
-        display: block;
-      }
+    }
 
+    .tooltip:hover:after {
+        display: block;
+    }
 </style>
+
 <body>
     <div class="container">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.s
-             <a href="#"  class="tooltip" data-tooltip="tooltip"  >Aut</a>, nam accusamus quasi ipsa consequatur magni iusto, nulla eos quis iure expedita doloremque inventore eius minima architecto quidem dolores harum eveniet!</p>
+            <a href="#" class="tooltip" data-tooltip="tooltip">Aut</a>, nam accusamus quasi ipsa consequatur magni
+            iusto, nulla eos quis iure expedita doloremque inventore eius minima architecto quidem dolores harum
+            eveniet!
+        </p>
     </div>
 </body>
+
 </html>
