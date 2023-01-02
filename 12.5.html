@@ -9,59 +9,30 @@
 <style>
 
 
-.tooltip {
-  position: relative;
-  text-decoration: underline dotted;
-  cursor: help;
-}
+      .tooltip{
+        position: relative;
+      }
+      
+      .tooltip:after {
+        display: none;
+        content: attr(data-tooltip);
+        color: rgb(142, 61, 61);
+        background-color: yellow;
+        position: absolute;
+        text-align: center;
+        width: 16vw;
+        border: 0.1rem solid rgb(186, 192, 38);
+      }
+      
+      .tooltip:hover:after {
+        display: block;
+      }
 
-.tooltip::before,
-.tooltip::after {
-  position: absolute;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity .3s ease-in-out;
-}
-
-.tooltip:hover::before,
-.tooltip:hover::after {
-  opacity: 1;
-  visibility: visible;
-}
-
-.tooltip::before {
-  content: attr(data-tooltip);
-  z-index: 2;
-  width: 210px;
-  color: rgb(31, 26, 26);
-  background: rgba(202, 200, 200, 0.7);
-  border-radius: 5px;
-  padding: 5px;
-}
-
-
-
-
-
-.tooltip--bottom::before,
-.tooltip--bottom::after {
-  top: 100%;
-  left: 50%;
-  transform: translate(-50%);
-  margin-top: 15px;
-}
-
-.tooltip--bottom::after {
-  margin-top: 8px;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-bottom: 7px solid rgba(0,0,0, .7);
-}
 </style>
 <body>
     <div class="container">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.s
-             <a href="#"   class="tooltip tooltip--bottom" data-tooltip="my value"  >Aut</a>, nam accusamus quasi ipsa consequatur magni iusto, nulla eos quis iure expedita doloremque inventore eius minima architecto quidem dolores harum eveniet!</p>
+             <a href="#"  class="tooltip" data-tooltip="tooltip"  >Aut</a>, nam accusamus quasi ipsa consequatur magni iusto, nulla eos quis iure expedita doloremque inventore eius minima architecto quidem dolores harum eveniet!</p>
     </div>
 </body>
 </html>
