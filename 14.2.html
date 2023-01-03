@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS – Pseudo selector animation</title>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+
+    }
+    .button {
+        width: 20vw;
+        height: 10vh;
+        background-color: white;
+        border: solid 0.1rem black;
+        
+    }
+    .container div{
+    display: flex;
+        justify-content: right;
+        align-items: stretch;
+        flex-direction: row;
+        justify-content: space-around;
+}
+
+    .btn1 {
+        background: rgb(91, 171, 206);
+        width: 30vw;
+        height: 30vh;
+        position: relative; 
+
+        
+ }
+
+    .btn1::before {
+        content: "Translate Y";
+        width: 30vw;
+        height: 30vh;
+        position: absolute;
+        transition:all 1s ease-in-out;
+        background: rgb(61, 61, 160);    
+        /* overflow: hidden; */
+    }
+
+    .btn1:hover::before {
+        transform: translateY(30vh);
+    }
+
+</style>
+
+<body>
+    <div class="container">
+        <div class="button btn1">  <span>Cool!</span> </div>
+
+        <div>
+            <div class="button btn2"><span>Translate Y</span></div>
+            <div class="button btn3"><span>Rotate</span></div>
+        </div>
+    </div>
+</body>
+
+</html>

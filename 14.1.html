@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS – Pseudo selector animation</title>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+
+    }
+
+    .container {
+        background: rgb(91, 171, 206);
+        width: 30vw;
+        height: 30vh;
+        position: relative; 
+
+        
+ }
+
+    .container::after {
+        content: "";
+        width: 30vw;
+        height: 30vh;
+        position: absolute;
+        transition:all 1s ease-in-out;
+        background: rgb(61, 61, 160);            
+
+   }
+
+    .container:hover::after {
+        transform: translateX(-30vw);
+        
+    }
+
+</style>
+
+<body>
+    <div class="container">
+
+    </div>
+</body>
+
+</html>
