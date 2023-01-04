@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS – First web page - Landing page</title>
+</head>
+
+<style> 
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+    body {
+        font-size: 62.5%;
+        
+        
+    }
+
+    .container {
+        display: grid;
+        grid-gap: 0.5rem;
+        grid-template-areas:
+    'image1 image1 image2 image2 image2 image3 image4 image4'
+    'image1 image1 image2 image2 image2 image3 image4 image4'
+    
+    'image5 image5 image2 image2 image2 image8 image8 image9'
+    'image5 image5 image6 image6 image7 image8 image8 image9'
+    'image5 image5 image6 image6 image13 image13 image13 image9'
+    'image10 image11 image11 image12 image13 image13 image13 image14'
+    'image10 image11 image11 image12 image13 image13 image13 image14';
+    }
+
+    .item {
+        padding:5.3rem;       
+
+    }
+
+
+    .item:nth-child(1) {
+        grid-area: image1;
+
+        background: url(./images/1.jpeg) no-repeat center center/cover;
+ 
+    }
+
+
+    .item:nth-child(2) {
+        grid-area: image2;
+
+        background: url(./images/2.jpeg) no-repeat center center/cover;
+   
+     }
+
+
+    .item:nth-child(3) {
+        grid-area: image3;
+
+        background: url(./images/3.jpeg) no-repeat center center/cover;
+       
+       }
+
+
+    .item:nth-child(4) {
+        grid-area: image4;
+
+        background: url(./images/4.jpeg) no-repeat center center/cover;
+
+       }
+
+    .item:nth-child(5) {
+        grid-area: image5;
+
+        background: url(./images/5.jpeg) no-repeat center center/cover;
+ 
+
+    }
+
+    .item:nth-child(6) {
+        grid-area: image6;
+
+        background: url(./images/6.jpeg) no-repeat center center/cover;
+ 
+
+    }
+
+    .item:nth-child(7) {
+        grid-area: image7;
+
+        background: url(./images/7.jpeg) no-repeat center center/cover;
+     
+
+    }
+
+    .item:nth-child(8) {
+        grid-area: image8;
+
+        background: url(./images/8.jpeg) no-repeat center center/cover;
+          
+
+    }
+
+    .item:nth-child(9) {
+        grid-area: image9;
+
+        background: url(./images/9.jpeg) no-repeat center center/cover;
+    
+
+    }
+
+    .item:nth-child(10) {
+        grid-area: image10;
+
+        background: url(./images/10.jpeg) no-repeat center center/cover;
+ 
+    }
+
+
+    .item:nth-child(11) {
+        grid-area: image11;
+
+        background: url(./images/11.jpeg) no-repeat center center/cover;
+  
+
+    }
+
+    .item:nth-child(12) {
+        grid-area: image12;
+
+        background: url(./images/12.jpeg) no-repeat center center/cover;
+        
+
+    }
+
+    .item:nth-child(13) {
+        grid-area: image13;
+ 
+         background: url(./images/13.jpeg) no-repeat center center/cover;
+
+
+    }
+
+    .item:nth-child(14) {
+        grid-area: image14;
+
+        background: url(./images/14.jpeg) no-repeat center center/cover;
+
+    }
+
+
+
+</style>
+
+<body>
+    <div class="container">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item "></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+
+    </div>
+</body>
+
+</html>
