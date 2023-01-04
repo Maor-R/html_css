@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS – CSS Grid Basics</title>
+</head>
+
+<style>
+
+body{
+    font-size: 62.5%;
+}
+    .container
+    {
+        display: grid;
+        grid-template-columns: repeat(4, 2fr);
+        grid-gap: 0.4rem;
+    }
+
+    .item
+    {
+        border: solid 0.2rem white;
+        border-radius: 0.7rem;
+        padding: 2rem;
+    }
+
+    
+    .item:nth-child(1){
+        grid-column-start:1 ;
+        grid-column-end: 3;
+        background-color: red;
+    }
+
+    
+    .item:nth-child(2){
+        grid-column-start:3 ;
+        grid-column-end: 5;
+        background-color: blue;
+    }
+
+    
+    .item:nth-child(3){
+        grid-column-start:1 ;
+        grid-column-end: 2;
+        background-color: green;
+    }
+
+    
+    .item:nth-child(4){
+        grid-column-start:2;
+        grid-column-end: 5;
+        background-color: purple;
+    }
+
+    .item:nth-child(5){
+        grid-column-start:1 ;
+        grid-column-end: 5;
+        background-color: yellow;
+    }
+
+    .item1
+    {
+        background-color: red;
+
+        
+    }
+
+    
+    .item2
+    {
+        background-color: blue;
+
+    }
+
+    
+    .item3
+    {
+        background-color: green;
+    }
+
+    
+    .item4
+    {
+        background-color: purple;
+    }
+
+    
+    .item5
+    {
+        /* background-color: yellow; */
+    }
+</style>
+<body>
+    <div class="grid"></div>
+    <div class="container">
+        <div class="item item1">Item1</div>
+        <div class="item item2">Item2</div>
+        <div class="item item3">Item3</div>
+        <div class="item item4">Item4</div>
+        <div class="item item5">Item5</div>
+    </div>
+</body>
+</html>
