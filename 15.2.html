@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS – CSS Grid Basics</title>
+</head>
+
+<style>
+
+body{
+    font-size: 62.5%;
+}
+    .container
+    {
+        display: grid;
+        grid-template-columns: repeat(4, 2fr);
+        grid-template-rows: repeat(3, 2fr);
+
+        grid-gap: 0.4rem;
+    }
+
+    .item
+    {
+        border: solid 0.2rem white;
+        border-radius: 0.7rem;
+        padding: 2rem;
+    }
+
+    
+    .item:nth-child(1){
+        grid-column-start:1 ;
+        grid-column-end: 5;
+        background-color: red;
+    }
+
+    
+    .item:nth-child(2){
+        grid-column-start:1 ;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 4;
+        background-color: blue;
+    }
+
+    
+    .item:nth-child(3){
+        grid-column-start:3 ;
+        grid-column-end: 5;
+        grid-row-end: 2;
+        grid-row-end: 3;
+        background-color: green;
+    }
+
+    
+    .item:nth-child(4){
+        grid-column-start:3;
+        grid-column-end: 4;
+        grid-row-end: 3;
+        grid-row-end: 4;
+        background-color: purple;
+    }
+
+    .item:nth-child(5){
+        grid-column-start:4 ;
+        grid-column-end: 5;
+        grid-row-end: 3;
+        grid-row-end: 4;
+        background-color: purple;
+    }
+
+
+</style>
+<body>
+    <div class="grid"></div>
+    <div class="container">
+        <div class="item "></div>
+        <div class="item "></div>
+        <div class="item "></div>
+        <div class="item "></div>
+        <div class="item "></div>
+    </div>
+</body>
+</html>
