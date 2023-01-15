@@ -1,68 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS – Pseudo selector animation</title>
-</head>
-
-<style>
-    * {
-        margin: 0;
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
         padding: 0;
-
-    }
-    .button {
-        width: 20vw;
-        height: 10vh;
-        background-color: white;
-        border: solid 0.1rem black;
-        
-    }
-    .container div{
-    display: flex;
-        justify-content: right;
-        align-items: stretch;
-        flex-direction: row;
-        justify-content: space-around;
-}
-
-    .btn1 {
-        background: rgb(91, 171, 206);
-        width: 30vw;
-        height: 30vh;
-        position: relative; 
-
-        
- }
-
-    .btn1::before {
-        content: "Translate Y";
-        width: 30vw;
-        height: 30vh;
+        margin: 0;
+      }
+      body {
+        background-color: lightgrey;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .button {
+        display: inline-block;
+        margin: 2rem;
+        color: #272727;
+        font-size: 45px;
+        border: 5px solid #272727;
+        padding: 40px 80px;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.4s;
+      }
+      .translate-y::before {
+        display: flex;
         position: absolute;
-        transition:all 1s ease-in-out;
-        background: rgb(61, 61, 160);    
-        /* overflow: hidden; */
-    }
+        top: 0;
+        left: 0;
+        justify-content: center;
+        align-items: center;
+        content: 'Cool!';
+        height: 100%;
+        width: 100%;
+        background: red;
+        transform: translateY(-150px);
+        transition: all 0.4s;
+      }
+      .translate-y:hover::before {
+        transform: translateY(0);
+      }
 
-    .btn1:hover::before {
-        transform: translateY(30vh);
-    }
+      .translate-x::before {
+        display: flex;
+        position: absolute;
+        top: 0;
+        left: 0;
+        justify-content: center;
+        align-items: center;
+        content: '';
+        height: 100%;
+        width: 100%;
+        background: blue;
+        transform: translateX(-400px);
+        transition: all 0.4s;
+        z-index: -1;
+      }
+      .translate-x:hover::before {
+        transform: translateY(0);
+      }
 
-</style>
+      .rotate::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        height: 100%;
+        width: 100%;
+        background: yellow;
+        transform: rotate(90deg);
+        transform-origin: top left;
+        transition: all 0.4s;
+        z-index: -1;
+      }
+      .rotate:hover::before {
+        transform: rotate(0);
+      }
 
-<body>
+      .scale::before {
+        position: absolute;
+        content: 'Scale';
+        color: white;
+        display: flex;
+        top: 0;
+        left: 0;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        transform: scale(5);
+        background: black;
+        opacity: 0;
+        transition: all 0.4s;
+        z-index: 2;
+      }
+      .scale:hover::before {
+        transform: scale(1);
+        opacity: 1;
+      }
+      
+      .skew {
+        color: white;
+      }
+      .skew:hover {
+        padding: 40px 80px;
+        display: inline-block;
+        transform: skewY(-5deg);
+      }
+
+      .skew::after {
+        content: '';
+        position: absolute;
+        background-color: deeppink;
+        transform: skew(0deg, 0deg) scale(0.002);
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        transition: all 0.5s;
+        z-index: 1;
+      }
+      .skew:hover::after {
+        transform: skew(180deg, 180deg);
+      }
+      .skew::before {
+        position: absolute;
+        content: 'Skew';
+        color: black;
+        display: flex;
+        transform: skew(0deg, 0deg);
+        transition: all 0.4s;
+        z-index: 2;
+      }
+      .skew:hover::before {
+        transform: skew(15deg, 10deg);
+      }
+    </style>
+  </head>
+  <body>
     <div class="container">
-        <div class="button btn1">  <span>Cool!</span> </div>
-
-        <div>
-            <div class="button btn2"><span>Translate Y</span></div>
-            <div class="button btn3"><span>Rotate</span></div>
-        </div>
+      <div class="button translate-y">TranslateY</div>
+      <div class="button translate-x">TranslateX</div>
+      <div class="button rotate">Rotate</div>
+      <div class="button scale">Scale</div>
+      <div class="button skew">Skew</div>
     </div>
-</body>
-
+  </body>
 </html>
